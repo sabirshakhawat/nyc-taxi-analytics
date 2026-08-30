@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Python virtual environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local environment settings
+.env
+
+# Large source datasets
+data/raw/*
+data/exports/*
+
+# Local DuckDB databases and temporary files
+database/*.duckdb
+database/*.duckdb.wal
+database/*.db
