@@ -17,9 +17,9 @@ LEFT JOIN read_csv('data/reference/taxi_zone_lookup.csv') AS dropoff
 WHERE trips.is_valid_completed_trip = TRUE
 )
 
-SELECT *
-from enriched_yellow_trips
-limit 100
+
+
+
 
 
     
