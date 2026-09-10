@@ -15,6 +15,7 @@ LEFT JOIN read_csv('data/reference/taxi_zone_lookup.csv') AS dropoff
     ON trips.DOLocationID = dropoff.LocationID
 
 WHERE trips.is_valid_completed_trip = TRUE
+
 )
 
 

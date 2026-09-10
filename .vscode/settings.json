@@ -3,6 +3,17 @@
     "*.parquet": "duckdb.dataFileViewer",
     "*.csv": "duckdb.dataFileViewer",
     "*.tsv": "duckdb.dataFileViewer",
-    "*.xlsx": "duckdb.dataFileViewer",
-  }
+    "*.xlsx": "duckdb.dataFileViewer"
+  },
+  "duckdb.resultsLocation": "active",
+  "duckdb.pageSize": 10000,
+  "duckdb.databases": [
+    {
+      "alias": "taxi",
+      "type": "file",
+      "path": "/Users/sabir/Documents/data-analyst-projects/nyc-taxi-analytics/database/taxi.duckdb",
+      "attached": true
+    }
+  ],
+  "duckdb.defaultDatabase": "taxi"
 }
