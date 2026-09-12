@@ -14,6 +14,13 @@ CREATE OR REPLACE VIEW stg_yellow_trips AS (
             WHEN trip_distance <= 0
             THEN TRUE ELSE FALSE
             END AS has_nonpositive_distance, 
+        CASE
+            WHEN trip_distance>500      
+            THEN TRUE ELSE FALSE
+            END AS has_excessive_distance,
+            -- A 500-mile ceiling removes the extreme data-error cluster.
+            -- The largest remaining observed trip is 295.99 miles;
+            -- the next recorded distance is 3,687.45 miles.
         CASE 
             WHEN total_amount <=0 OR fare_amount < 0
             THEN TRUE ELSE FALSE
@@ -26,7 +33,8 @@ CREATE OR REPLACE VIEW stg_yellow_trips AS (
         SELECT *,
         CASE    
             WHEN has_invalid_amount=TRUE OR has_nonpositive_duration = TRUE
-            OR has_nonpositive_distance = TRUE
+            OR has_nonpositive_distance = TRUE 
+            OR has_excessive_distance=TRUE
             THEN FALSE ELSE TRUE
             END AS is_valid_completed_trip
         FROM flagged_trips

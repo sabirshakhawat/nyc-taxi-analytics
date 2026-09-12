@@ -11,23 +11,41 @@ WITH zone_hourly_demand AS (
     FROM enriched_yellow_trips
     GROUP BY pickup_date,pickup_hour,pickup_borough,pickup_zone
 )
-SELECT pickup_hour,
+SELECT pickup_hour AS pickup_hour_of_the_day,
        pickup_zone,
        pickup_borough,
-       ROUND(AVG(trips_in_hour)) AS zone_avg_trips_in_hour,
-       ROUND(AVG(hourly_passenger_count)) AS avg_hourly_passenger_count,
-       ROUND(AVG(hourly_passenger_amount)) AS avg_hourly_passenger_amount,
-       ROUND(AVG(hourly_trip_distance)) AS avg_hourly_trip_distance,
-       ROUND(AVG(hourly_trip_duration_minutes)) AS avg_hourly_trip_duration_minutes
+       ROUND(AVG(trips_in_hour)) AS avg_trips_per_active_day,
+       ROUND(AVG(hourly_passenger_count)) AS avg_reported_passengers_per_active_day,
+       ROUND(AVG(hourly_passenger_amount)) AS avg_passenger_amount_per_active_day,
+       ROUND(AVG(hourly_trip_distance)) AS avg_trip_miles_per_active_day,
+       ROUND(AVG(hourly_trip_duration_minutes)) AS avg_trip_minutes_per_active_day
 
 
 FROM zone_hourly_demand
-GROUP BY pickup_hour,pickup_borough,pickup_zone
-ORDER BY pickup_hour,zone_avg_trips_in_hour DESC, pickup_zone
+GROUP BY pickup_hour_of_the_day,pickup_borough,pickup_zone
+ORDER BY pickup_hour,avg_trips_per_active_day DESC, pickup_zone
 
 /*
     Overview on zone hour grain performance: passengers picked up,
-    fares collected, trip distance,
+    fares collected, trip distance.
+
+    UES at 3PM has the highest hourly pickup demand, with 413 trips 
+    per day on avg during that hour.
+
+    Upper East Side zones produced the strongest afternoon demand. 
+    Upper East Side South led at 1, 2, and 4 p.m., 
+    while Upper East Side North reached the overall peak at 3 p.m.
+
+    Midtoen becomes the leading pickup zone from 5-7 PM, due to 
+    people getting off at work. Peaking at 400 average trips at 6 PM.
+
+    East Village led overnight demand from midnight through 4 AM.
+    Demand dropped from 254 trips at midnight to 64 trips at 4 AM.
+
+    JFK led at 6 AM, 8 PM, 10 PM and 11 PM.
+
+
+*/
 
 
 
