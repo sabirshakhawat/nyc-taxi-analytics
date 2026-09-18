@@ -1,4 +1,4 @@
-WITH route_performance AS (
+CREATE OR REPLACE VIEW route_performance AS
     SELECT pickup_zone,
            dropoff_zone,
            COUNT(*) AS route_total_trips,
@@ -12,9 +12,9 @@ WITH route_performance AS (
                 END AS route_category
 
     FROM enriched_yellow_trips
-    GROUP BY pickup_zone,dropoff_zone,route_category
-)
+    GROUP BY pickup_zone,dropoff_zone,route_category;
 
+CREATE OR REPLACE VIEW route_analysis AS
 SELECT pickup_zone,
        dropoff_zone,
        route_category,
@@ -24,4 +24,6 @@ SELECT pickup_zone,
        ROUND((route_total_trip_duration)/route_total_trips) AS avg_route_trip_duration
 
 FROM route_performance
-ORDER BY route_total_trips DESC
+ORDER BY route_total_trips DESC;
+
+SELECT * FROM route_analysis ORDER BY route_total_trips DESC;

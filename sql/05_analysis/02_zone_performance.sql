@@ -1,3 +1,4 @@
+CREATE OR REPLACE VIEW zone_performance AS
 SELECT 
        COUNT(*) AS daily_trip_count,
        pickup_zone,
@@ -9,7 +10,9 @@ SELECT
 
 FROM enriched_yellow_trips
 GROUP BY pickup_zone,pickup_borough
-ORDER BY daily_trip_count DESC
+ORDER BY daily_trip_count DESC;
+
+SELECT * FROM zone_performance ORDER BY daily_trip_count DESC;
 
 -- UES,JFK, Midtown areas have the highest concentration of total trips
 -- most trips happening in Manhattan.

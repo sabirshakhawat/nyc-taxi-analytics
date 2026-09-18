@@ -1,5 +1,6 @@
 -- Grain of the final result: one row per hour of day (0-23).
 -- First aggregate each calendar date/hour so daily hourly averages are valid.
+CREATE OR REPLACE VIEW hourly_demand AS
 WITH demand_by_date_hour AS (
     SELECT
         pickup_date,
@@ -49,3 +50,5 @@ SELECT
 FROM demand_by_date_hour
 GROUP BY pickup_hour
 ORDER BY pickup_hour;
+
+SELECT * FROM hourly_demand ORDER BY pickup_hour;
