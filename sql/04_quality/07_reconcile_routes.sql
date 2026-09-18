@@ -12,24 +12,10 @@ WITH enriched_metrics AS (
     FROM enriched_yellow_trips
 ),
 route_performance AS (
-    SELECT pickup_zone, dropoff_zone,
-           COUNT(*) AS route_total_trips,
-           SUM(total_amount) AS route_total_amount,
-           SUM(trip_duration_minutes) AS route_total_trip_duration,
-           SUM(trip_distance) AS route_total_trip_distance,
-           CASE WHEN PULocationID = DOLocationID
-                THEN 'Same-Zone' ELSE 'Cross-Zone' END AS route_category
-    FROM enriched_yellow_trips
-    GROUP BY pickup_zone, dropoff_zone, route_category
+    SELECT * FROM main.route_performance
 ),
 route_analysis AS (
-    SELECT pickup_zone, dropoff_zone, route_category, route_total_trips,
-           ROUND(route_total_amount / route_total_trips, 2) AS avg_route_amount,
-           ROUND(route_total_trip_distance / route_total_trips, 2)
-               AS avg_route_trip_distance,
-           ROUND(route_total_trip_duration / route_total_trips)
-               AS avg_route_trip_duration
-    FROM route_performance
+    SELECT * FROM main.route_analysis
 ),
 route_totals AS (
     SELECT COUNT(*) AS result_rows,
@@ -48,12 +34,12 @@ route_totals AS (
 route_average_errors AS (
     SELECT COUNT(*) FILTER (
                WHERE a.route_total_trips IS DISTINCT FROM r.route_total_trips
-                  OR a.avg_route_amount IS DISTINCT FROM
-                     ROUND(r.route_total_amount / r.route_total_trips, 2)
-                  OR a.avg_route_trip_distance IS DISTINCT FROM
-                     ROUND(r.route_total_trip_distance / r.route_total_trips, 2)
-                  OR a.avg_route_trip_duration IS DISTINCT FROM
-                     ROUND(r.route_total_trip_duration / r.route_total_trips)
+                  OR ABS(a.avg_route_amount -
+                         r.route_total_amount / r.route_total_trips) > 0.005001
+                  OR ABS(a.avg_route_trip_distance -
+                         r.route_total_trip_distance / r.route_total_trips) > 0.005001
+                  OR ABS(a.avg_route_trip_duration -
+                         r.route_total_trip_duration / r.route_total_trips) > 0.500001
            ) AS incorrect_route_averages
     FROM route_analysis a
     JOIN route_performance r

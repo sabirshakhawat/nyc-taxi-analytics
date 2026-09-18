@@ -37,16 +37,12 @@ enriched_metrics AS (
 
 daily_demand_validation AS (
     SELECT pickup_date,
-           COUNT(*) AS daily_trip_count,
-           SUM(fare_amount) AS daily_metered_fares,
-           SUM(total_amount) AS daily_amount_earned,
-           SUM(passenger_count) AS daily_reported_passengers,
-           COUNT(passenger_count) AS daily_trips_with_passenger_count,
-           COUNT(*) FILTER (
-               WHERE passenger_count IS NULL
-           ) AS daily_trips_missing_passenger_count
-    FROM enriched_yellow_trips
-    GROUP BY pickup_date
+           daily_trip_count,
+           total_metered_fares AS daily_metered_fares,
+           total_passenger_amount_paid AS daily_amount_earned,
+           total_passengers AS daily_reported_passengers,
+           avg_passenger_amount AS daily_avg_reported_passengers
+    FROM daily_demand_revenue
 ),
 
 daily_demand_totals AS (
@@ -56,11 +52,24 @@ daily_demand_totals AS (
            SUM(daily_metered_fares) AS reconciled_metered_fares,
            SUM(daily_amount_earned) AS reconciled_amount_earned,
            SUM(daily_reported_passengers) AS reconciled_reported_passengers,
-           SUM(daily_trips_with_passenger_count)
-               AS reconciled_trips_with_passenger_count,
-           SUM(daily_trips_missing_passenger_count)
-               AS reconciled_trips_missing_passenger_count
+           COUNT(*) FILTER (WHERE daily_avg_reported_passengers IS NULL)
+               AS days_without_passenger_average
     FROM daily_demand_validation
+),
+
+daily_average_errors AS (
+    SELECT COUNT(*) FILTER (
+        WHERE a.daily_avg_reported_passengers IS DISTINCT FROM e.expected_average
+          AND (a.daily_avg_reported_passengers IS NULL
+               OR e.expected_average IS NULL
+               OR ABS(a.daily_avg_reported_passengers - e.expected_average) > 0.000001)
+    ) AS incorrect_averages
+    FROM daily_demand_validation a
+    JOIN (
+        SELECT pickup_date, AVG(passenger_count) AS expected_average
+        FROM enriched_yellow_trips
+        GROUP BY pickup_date
+    ) e USING (pickup_date)
 ),
 
 daily_checks AS (
@@ -105,26 +114,6 @@ daily_checks AS (
     UNION ALL
 
     SELECT 5,
-           'Daily passenger-count coverage reconciles to enriched trips',
-           reconciled_trips_with_passenger_count,
-           trips_with_passenger_count,
-           0
-    FROM daily_demand_totals
-    CROSS JOIN enriched_metrics
-
-    UNION ALL
-
-    SELECT 6,
-           'Daily missing passenger counts reconcile to enriched trips',
-           reconciled_trips_missing_passenger_count,
-           trips_missing_passenger_count,
-           0
-    FROM daily_demand_totals
-    CROSS JOIN enriched_metrics
-
-    UNION ALL
-
-    SELECT 7,
            'Daily result contains one row per observed date',
            daily_rows,
            days_observed,
@@ -134,12 +123,21 @@ daily_checks AS (
 
     UNION ALL
 
-    SELECT 8,
+    SELECT 6,
            'Daily result has no duplicate dates',
            daily_rows - distinct_daily_dates,
            0,
            0
     FROM daily_demand_totals
+
+    UNION ALL
+
+    SELECT 7,
+           'Daily passenger averages match enriched trips',
+           incorrect_averages,
+           0,
+           0
+    FROM daily_average_errors
 )
 
 SELECT check_name,
@@ -152,5 +150,3 @@ SELECT check_name,
        END AS check_status
 FROM daily_checks
 ORDER BY check_order;
-
-

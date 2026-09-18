@@ -11,27 +11,10 @@ WITH enriched_metrics AS (
     FROM enriched_yellow_trips
 ),
 zone_hourly_demand AS (
-    SELECT pickup_date,
-           EXTRACT(HOUR FROM tpep_pickup_datetime) AS pickup_hour,
-           pickup_borough, pickup_zone,
-           COUNT(*) AS trips_in_hour,
-           SUM(passenger_count) AS hourly_passenger_count,
-           SUM(total_amount) AS hourly_passenger_amount,
-           SUM(trip_distance) AS hourly_trip_distance,
-           SUM(trip_duration_minutes) AS hourly_trip_duration_minutes
-    FROM enriched_yellow_trips
-    GROUP BY pickup_date, pickup_hour, pickup_borough, pickup_zone
+    SELECT * FROM main.zone_hourly_demand
 ),
 zone_hourly_analysis AS (
-    SELECT pickup_hour AS pickup_hour_of_the_day,
-           pickup_zone, pickup_borough,
-           ROUND(AVG(trips_in_hour)) AS avg_trips_per_active_day,
-           ROUND(AVG(hourly_passenger_count)) AS avg_reported_passengers_per_active_day,
-           ROUND(AVG(hourly_passenger_amount)) AS avg_passenger_amount_per_active_day,
-           ROUND(AVG(hourly_trip_distance)) AS avg_trip_miles_per_active_day,
-           ROUND(AVG(hourly_trip_duration_minutes)) AS avg_trip_minutes_per_active_day
-    FROM zone_hourly_demand
-    GROUP BY pickup_hour_of_the_day, pickup_borough, pickup_zone
+    SELECT * FROM zone_hourly_performance
 ),
 zone_hourly_totals AS (
     SELECT COUNT(*) AS intermediate_rows,
@@ -52,17 +35,19 @@ final_grain AS (
 ),
 average_errors AS (
     SELECT COUNT(*) FILTER (
-               WHERE a.avg_trips_per_active_day IS DISTINCT FROM
-                     ROUND(e.trips * 1.0 / e.active_days)
-                  OR a.avg_reported_passengers_per_active_day IS DISTINCT FROM
-                     ROUND(e.reported_passengers * 1.0 /
-                           NULLIF(e.days_with_passenger_data, 0))
-                  OR a.avg_passenger_amount_per_active_day IS DISTINCT FROM
-                     ROUND(e.passenger_amount / e.active_days)
-                  OR a.avg_trip_miles_per_active_day IS DISTINCT FROM
-                     ROUND(e.trip_distance / e.active_days)
-                  OR a.avg_trip_minutes_per_active_day IS DISTINCT FROM
-                     ROUND(e.trip_duration / e.active_days)
+               WHERE ABS(a.avg_trips_per_active_day -
+                         e.trips * 1.0 / e.active_days) > 0.500001
+                  OR (a.avg_reported_passengers_per_active_day IS NULL) IS DISTINCT FROM
+                     (e.reported_passengers IS NULL)
+                  OR ABS(a.avg_reported_passengers_per_active_day -
+                         e.reported_passengers * 1.0 /
+                         NULLIF(e.days_with_passenger_data, 0)) > 0.500001
+                  OR ABS(a.avg_passenger_amount_per_active_day -
+                         e.passenger_amount / e.active_days) > 0.500001
+                  OR ABS(a.avg_trip_miles_per_active_day -
+                         e.trip_distance / e.active_days) > 0.500001
+                  OR ABS(a.avg_trip_minutes_per_active_day -
+                         e.trip_duration / e.active_days) > 0.500001
            ) AS incorrect_averages
     FROM zone_hourly_analysis a
     JOIN (

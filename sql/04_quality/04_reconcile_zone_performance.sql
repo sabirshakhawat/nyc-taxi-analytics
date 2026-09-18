@@ -8,15 +8,13 @@ WITH enriched_metrics AS (
     FROM enriched_yellow_trips
 ),
 zone_analysis AS (
-    SELECT pickup_zone,
-           pickup_borough,
-           COUNT(*) AS zone_trip_count,
-           ROUND(SUM(fare_amount), 2) AS total_metered_fares,
-           ROUND(SUM(total_amount)) AS total_passenger_amount_paid,
-           SUM(passenger_count) AS total_passengers,
-           ROUND(AVG(passenger_count), 2) AS avg_passenger_per_trip
-    FROM enriched_yellow_trips
-    GROUP BY pickup_zone, pickup_borough
+    SELECT pickup_zone, pickup_borough,
+           daily_trip_count AS zone_trip_count,
+           total_metered_fares,
+           total_passenger_amount_paid,
+           total_passengers,
+           avg_passenger_per_trip
+    FROM zone_performance
 ),
 zone_totals AS (
     SELECT COUNT(*) AS result_rows,
