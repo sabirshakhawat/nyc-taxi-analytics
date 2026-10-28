@@ -9,7 +9,7 @@ WITH enriched_metrics AS (
 ),
 zone_analysis AS (
     SELECT pickup_zone, pickup_borough,
-           daily_trip_count AS zone_trip_count,
+           total_trip_count AS zone_trip_count,
            total_metered_fares,
            total_passenger_amount_paid,
            total_passengers,

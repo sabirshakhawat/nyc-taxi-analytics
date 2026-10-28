@@ -1,0 +1,6 @@
+Priority_zone,Peak_hour,Pickups_per_day_in_peak_hour,Monthly_trip_share,Label
+1. Upper East Side South,15:00,393.3,4.34%,
+2. Upper East Side North,15:00,412.5,4.14%,
+3. JFK Airport,20:00,360.9,4.03%,
+4. Midtown Center,18:00,396.6,3.96%,
+5. Penn Station/Madison Sq West,22:00,218.2,3.00%,

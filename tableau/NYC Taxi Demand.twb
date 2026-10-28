@@ -1,0 +1,2284 @@
+<?xml version='1.0' encoding='utf-8'?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" original-version="18.1" source-build="2026.2.2 (20262.26.0819.2015)" source-platform="mac" version="18.1">
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <datasources>
+    <datasource caption="Zone Performance" inline="true" name="federated.1adpn470f2ittv1cz1ob007rj8pe" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="zone_performance" name="textscan.7fce42b09fc55e4cb6879e8589fd0d42">
+            <connection class="textscan" directory="Data" filename="zone_performance.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.7fce42b09fc55e4cb6879e8589fd0d42" name="zone_performance.csv" table="[zone_performance#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="integer" name="total_trip_count" ordinal="0" />
+            <column datatype="string" name="pickup_zone" ordinal="1" />
+            <column datatype="string" name="pickup_borough" ordinal="2" />
+            <column datatype="real" name="total_metered_fares" ordinal="3" />
+            <column datatype="real" name="total_passenger_amount_paid" ordinal="4" />
+            <column datatype="integer" name="total_passengers" ordinal="5" />
+            <column datatype="real" name="avg_passenger_per_trip" ordinal="6" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>total_trip_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_trip_count]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>total_trip_count</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>pickup_zone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pickup_zone]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>pickup_zone</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>pickup_borough</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pickup_borough]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>pickup_borough</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_metered_fares</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_metered_fares]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>total_metered_fares</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_passenger_amount_paid</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_passenger_amount_paid]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>total_passenger_amount_paid</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_passengers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_passengers]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>total_passengers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_passenger_per_trip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_passenger_per_trip]</local-name>
+            <parent-name>[zone_performance.csv]</parent-name>
+            <remote-alias>avg_passenger_per_trip</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Total Trip Count" datatype="integer" name="[total_trip_count]" role="measure" type="quantitative" />
+      <column caption="Pickup Zone" datatype="string" name="[pickup_zone]" role="dimension" type="nominal" />
+      <column caption="Pickup Borough" datatype="string" name="[pickup_borough]" role="dimension" type="nominal" />
+      <column caption="Total Metered Fares" datatype="real" name="[total_metered_fares]" role="measure" type="quantitative" />
+      <column caption="Total Passenger Amount Paid" datatype="real" name="[total_passenger_amount_paid]" role="measure" type="quantitative" />
+      <column caption="Total Passengers" datatype="integer" name="[total_passengers]" role="measure" type="quantitative" />
+      <column caption="Avg Passenger Per Trip" datatype="real" name="[avg_passenger_per_trip]" role="measure" type="quantitative" />
+      <extract enabled="true" count="-1" units="records" object-id="" user-specific="false">
+        <connection class="hyper" dbname="Data/Extracts/zone_performance.hyper" schema="Extract" tablename="Extract" access_mode="readonly">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>total_trip_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_trip_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_trip_count</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>pickup_zone</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pickup_zone]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_zone</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>pickup_borough</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pickup_borough]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_borough</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_metered_fares</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_metered_fares]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_metered_fares</remote-alias>
+              <ordinal>3</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_passenger_amount_paid</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_passenger_amount_paid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_passenger_amount_paid</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_passengers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_passengers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_passengers</remote-alias>
+              <ordinal>5</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_passenger_per_trip</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_passenger_per_trip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_passenger_per_trip</remote-alias>
+              <ordinal>6</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <object-graph>
+        <objects>
+          <object caption="zone_performance.csv" id="zone_performance.csv_107F857E9CCC51A1A8737F1C3D8F2716">
+            <properties context="">
+              <relation connection="textscan.7fce42b09fc55e4cb6879e8589fd0d42" name="zone_performance.csv" table="[zone_performance#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="integer" name="total_trip_count" ordinal="0" />
+                  <column datatype="string" name="pickup_zone" ordinal="1" />
+                  <column datatype="string" name="pickup_borough" ordinal="2" />
+                  <column datatype="real" name="total_metered_fares" ordinal="3" />
+                  <column datatype="real" name="total_passenger_amount_paid" ordinal="4" />
+                  <column datatype="integer" name="total_passengers" ordinal="5" />
+                  <column datatype="real" name="avg_passenger_per_trip" ordinal="6" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption="Zone Hourly Performance" inline="true" name="federated.1hi7sw51lq8z7k1djxccf17rgpei" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="zone_hourly_performance" name="textscan.37db9acc844d5174bfcf98f145b9b916">
+            <connection class="textscan" directory="Data" filename="zone_hourly_performance.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.37db9acc844d5174bfcf98f145b9b916" name="zone_hourly_performance.csv" table="[zone_hourly_performance#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="integer" name="pickup_hour_of_the_day" ordinal="0" />
+            <column datatype="string" name="pickup_zone" ordinal="1" />
+            <column datatype="string" name="pickup_borough" ordinal="2" />
+            <column datatype="real" name="avg_trips_per_active_day" ordinal="3" />
+            <column datatype="real" name="avg_reported_passengers_per_active_day" ordinal="4" />
+            <column datatype="real" name="avg_passenger_amount_per_active_day" ordinal="5" />
+            <column datatype="real" name="avg_trip_miles_per_active_day" ordinal="6" />
+            <column datatype="real" name="avg_trip_minutes_per_active_day" ordinal="7" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>pickup_hour_of_the_day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pickup_hour_of_the_day]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>pickup_hour_of_the_day</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>pickup_zone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pickup_zone]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>pickup_zone</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>pickup_borough</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pickup_borough]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>pickup_borough</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_trips_per_active_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trips_per_active_day]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>avg_trips_per_active_day</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_reported_passengers_per_active_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_reported_passengers_per_active_day]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>avg_reported_passengers_per_active_day</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_passenger_amount_per_active_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_passenger_amount_per_active_day]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>avg_passenger_amount_per_active_day</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_trip_miles_per_active_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trip_miles_per_active_day]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>avg_trip_miles_per_active_day</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_trip_minutes_per_active_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trip_minutes_per_active_day]</local-name>
+            <parent-name>[zone_hourly_performance.csv]</parent-name>
+            <remote-alias>avg_trip_minutes_per_active_day</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Pickup Hour Of The Day" datatype="integer" name="[pickup_hour_of_the_day]" role="dimension" type="quantitative" />
+      <column caption="Pickup Zone" datatype="string" name="[pickup_zone]" role="dimension" type="nominal" />
+      <column caption="Pickup Borough" datatype="string" name="[pickup_borough]" role="dimension" type="nominal" />
+      <column caption="Avg Trips In This Hour" datatype="real" name="[avg_trips_per_active_day]" role="dimension" type="quantitative" />
+      <column caption="Avg Reported Passengers Per Active Day" datatype="real" name="[avg_reported_passengers_per_active_day]" role="dimension" type="quantitative" />
+      <column caption="Avg Passenger Amount Per Active Day" datatype="real" name="[avg_passenger_amount_per_active_day]" role="dimension" type="quantitative" />
+      <column caption="Avg Trip Miles Per Active Day" datatype="real" name="[avg_trip_miles_per_active_day]" role="dimension" type="quantitative" />
+      <column caption="Avg Trip Minutes Per Active Day" datatype="real" name="[avg_trip_minutes_per_active_day]" role="dimension" type="quantitative" />
+      <extract enabled="true" count="-1" units="records" object-id="" user-specific="false">
+        <connection class="hyper" dbname="Data/Extracts/zone_hourly_performance.hyper" schema="Extract" tablename="Extract" access_mode="readonly">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>pickup_hour_of_the_day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pickup_hour_of_the_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_hour_of_the_day</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>pickup_zone</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pickup_zone]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_zone</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>pickup_borough</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pickup_borough]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_borough</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_trips_per_active_day</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trips_per_active_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trips_per_active_day</remote-alias>
+              <ordinal>3</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_reported_passengers_per_active_day</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_reported_passengers_per_active_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_reported_passengers_per_active_day</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_passenger_amount_per_active_day</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_passenger_amount_per_active_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_passenger_amount_per_active_day</remote-alias>
+              <ordinal>5</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_trip_miles_per_active_day</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trip_miles_per_active_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trip_miles_per_active_day</remote-alias>
+              <ordinal>6</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_trip_minutes_per_active_day</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trip_minutes_per_active_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trip_minutes_per_active_day</remote-alias>
+              <ordinal>7</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <object-graph>
+        <objects>
+          <object caption="zone_hourly_performance.csv" id="zone_hourly_performance.csv_663990B61120503CB068F7AF9AE35D45">
+            <properties context="">
+              <relation connection="textscan.37db9acc844d5174bfcf98f145b9b916" name="zone_hourly_performance.csv" table="[zone_hourly_performance#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="integer" name="pickup_hour_of_the_day" ordinal="0" />
+                  <column datatype="string" name="pickup_zone" ordinal="1" />
+                  <column datatype="string" name="pickup_borough" ordinal="2" />
+                  <column datatype="real" name="avg_trips_per_active_day" ordinal="3" />
+                  <column datatype="real" name="avg_reported_passengers_per_active_day" ordinal="4" />
+                  <column datatype="real" name="avg_passenger_amount_per_active_day" ordinal="5" />
+                  <column datatype="real" name="avg_trip_miles_per_active_day" ordinal="6" />
+                  <column datatype="real" name="avg_trip_minutes_per_active_day" ordinal="7" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption="Hourly Demand" inline="true" name="federated.1u5j93w0zyn4pj1ayazlx01lx9gc" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="hourly_demand" name="textscan.5e413c5f192a58a49b8429b054560551">
+            <connection class="textscan" directory="Data" filename="hourly_demand.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.5e413c5f192a58a49b8429b054560551" name="hourly_demand.csv" table="[hourly_demand#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="integer" name="pickup_hour" ordinal="0" />
+            <column datatype="integer" name="days_observed" ordinal="1" />
+            <column datatype="integer" name="total_trips" ordinal="2" />
+            <column datatype="real" name="avg_daily_trips" ordinal="3" />
+            <column datatype="integer" name="total_reported_passengers" ordinal="4" />
+            <column datatype="real" name="avg_daily_reported_passengers" ordinal="5" />
+            <column datatype="real" name="passenger_count_coverage_pct" ordinal="6" />
+            <column datatype="real" name="avg_passengers_per_reported_trip" ordinal="7" />
+            <column datatype="real" name="total_metered_fares" ordinal="8" />
+            <column datatype="real" name="avg_daily_metered_fares" ordinal="9" />
+            <column datatype="real" name="total_passenger_amount" ordinal="10" />
+            <column datatype="real" name="avg_daily_passenger_amount" ordinal="11" />
+            <column datatype="real" name="avg_passenger_amount_per_trip" ordinal="12" />
+            <column datatype="real" name="avg_trip_distance_miles" ordinal="13" />
+            <column datatype="real" name="avg_trip_duration_minutes" ordinal="14" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>pickup_hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pickup_hour]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>pickup_hour</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>days_observed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days_observed]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>days_observed</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_trips</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_trips]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>total_trips</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_daily_trips</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_daily_trips]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_daily_trips</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_reported_passengers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_reported_passengers]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>total_reported_passengers</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_daily_reported_passengers</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_daily_reported_passengers]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_daily_reported_passengers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>passenger_count_coverage_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[passenger_count_coverage_pct]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>passenger_count_coverage_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_passengers_per_reported_trip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_passengers_per_reported_trip]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_passengers_per_reported_trip</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_metered_fares</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_metered_fares]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>total_metered_fares</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_daily_metered_fares</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_daily_metered_fares]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_daily_metered_fares</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_passenger_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_passenger_amount]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>total_passenger_amount</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_daily_passenger_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_daily_passenger_amount]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_daily_passenger_amount</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_passenger_amount_per_trip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_passenger_amount_per_trip]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_passenger_amount_per_trip</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_trip_distance_miles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trip_distance_miles]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_trip_distance_miles</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_trip_duration_minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trip_duration_minutes]</local-name>
+            <parent-name>[hourly_demand.csv]</parent-name>
+            <remote-alias>avg_trip_duration_minutes</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Pickup Hour" datatype="integer" name="[pickup_hour]" role="dimension" type="ordinal" />
+      <column caption="Days Observed" datatype="integer" name="[days_observed]" role="measure" type="quantitative" />
+      <column caption="Total Trips" datatype="integer" name="[total_trips]" role="measure" type="quantitative" />
+      <column caption="Avg Daily Trips" datatype="real" name="[avg_daily_trips]" role="measure" type="quantitative" />
+      <column caption="Total Reported Passengers" datatype="integer" name="[total_reported_passengers]" role="measure" type="quantitative" />
+      <column caption="Avg Daily Reported Passengers" datatype="real" name="[avg_daily_reported_passengers]" role="measure" type="quantitative" />
+      <column caption="Passenger Count Coverage Pct" datatype="real" name="[passenger_count_coverage_pct]" role="measure" type="quantitative" />
+      <column caption="Avg Passengers Per Reported Trip" datatype="real" name="[avg_passengers_per_reported_trip]" role="measure" type="quantitative" />
+      <column caption="Total Metered Fares" datatype="real" name="[total_metered_fares]" role="measure" type="quantitative" />
+      <column caption="Avg Daily Metered Fares" datatype="real" name="[avg_daily_metered_fares]" role="measure" type="quantitative" />
+      <column caption="Total Passenger Amount" datatype="real" name="[total_passenger_amount]" role="measure" type="quantitative" />
+      <column caption="Avg Daily Passenger Amount" datatype="real" name="[avg_daily_passenger_amount]" role="measure" type="quantitative" />
+      <column caption="Avg Passenger Amount Per Trip" datatype="real" name="[avg_passenger_amount_per_trip]" role="measure" type="quantitative" />
+      <column caption="Avg Trip Distance Miles" datatype="real" name="[avg_trip_distance_miles]" role="measure" type="quantitative" />
+      <column caption="Avg Trip Duration Minutes" datatype="real" name="[avg_trip_duration_minutes]" role="measure" type="quantitative" />
+      <extract enabled="true" count="-1" units="records" object-id="" user-specific="false">
+        <connection class="hyper" dbname="Data/Extracts/hourly_demand.hyper" schema="Extract" tablename="Extract" access_mode="readonly">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>pickup_hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pickup_hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_hour</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>days_observed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[days_observed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>days_observed</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_trips</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_trips]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_trips</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_daily_trips</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_daily_trips]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_daily_trips</remote-alias>
+              <ordinal>3</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_reported_passengers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_reported_passengers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_reported_passengers</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_daily_reported_passengers</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_daily_reported_passengers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_daily_reported_passengers</remote-alias>
+              <ordinal>5</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>passenger_count_coverage_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[passenger_count_coverage_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>passenger_count_coverage_pct</remote-alias>
+              <ordinal>6</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_passengers_per_reported_trip</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_passengers_per_reported_trip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_passengers_per_reported_trip</remote-alias>
+              <ordinal>7</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_metered_fares</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_metered_fares]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_metered_fares</remote-alias>
+              <ordinal>8</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_daily_metered_fares</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_daily_metered_fares]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_daily_metered_fares</remote-alias>
+              <ordinal>9</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_passenger_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_passenger_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_passenger_amount</remote-alias>
+              <ordinal>10</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_daily_passenger_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_daily_passenger_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_daily_passenger_amount</remote-alias>
+              <ordinal>11</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_passenger_amount_per_trip</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_passenger_amount_per_trip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_passenger_amount_per_trip</remote-alias>
+              <ordinal>12</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_trip_distance_miles</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trip_distance_miles]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trip_distance_miles</remote-alias>
+              <ordinal>13</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_trip_duration_minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trip_duration_minutes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trip_duration_minutes</remote-alias>
+              <ordinal>14</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <object-graph>
+        <objects>
+          <object caption="hourly_demand.csv" id="hourly_demand.csv_20EED8DDFA03504DB48A36FAAFE70E11">
+            <properties context="">
+              <relation connection="textscan.5e413c5f192a58a49b8429b054560551" name="hourly_demand.csv" table="[hourly_demand#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="integer" name="pickup_hour" ordinal="0" />
+                  <column datatype="integer" name="days_observed" ordinal="1" />
+                  <column datatype="integer" name="total_trips" ordinal="2" />
+                  <column datatype="real" name="avg_daily_trips" ordinal="3" />
+                  <column datatype="integer" name="total_reported_passengers" ordinal="4" />
+                  <column datatype="real" name="avg_daily_reported_passengers" ordinal="5" />
+                  <column datatype="real" name="passenger_count_coverage_pct" ordinal="6" />
+                  <column datatype="real" name="avg_passengers_per_reported_trip" ordinal="7" />
+                  <column datatype="real" name="total_metered_fares" ordinal="8" />
+                  <column datatype="real" name="avg_daily_metered_fares" ordinal="9" />
+                  <column datatype="real" name="total_passenger_amount" ordinal="10" />
+                  <column datatype="real" name="avg_daily_passenger_amount" ordinal="11" />
+                  <column datatype="real" name="avg_passenger_amount_per_trip" ordinal="12" />
+                  <column datatype="real" name="avg_trip_distance_miles" ordinal="13" />
+                  <column datatype="real" name="avg_trip_duration_minutes" ordinal="14" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption="Daily Demand Revenue" inline="true" name="federated.1uwl16d11v8kzy1exlwbj10f25l4" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="daily_demand_revenue" name="textscan.4a7e0700cc02544899ab2cfbb3587e4f">
+            <connection class="textscan" directory="Data" filename="daily_demand_revenue.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.4a7e0700cc02544899ab2cfbb3587e4f" name="daily_demand_revenue.csv" table="[daily_demand_revenue#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="date" name="pickup_date" ordinal="0" />
+            <column datatype="integer" name="daily_trip_count" ordinal="1" />
+            <column datatype="real" name="total_metered_fares" ordinal="2" />
+            <column datatype="real" name="total_passenger_amount_paid" ordinal="3" />
+            <column datatype="integer" name="total_passengers" ordinal="4" />
+            <column datatype="real" name="avg_passenger_amount" ordinal="5" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>pickup_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[pickup_date]</local-name>
+            <parent-name>[daily_demand_revenue.csv]</parent-name>
+            <remote-alias>pickup_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>daily_trip_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[daily_trip_count]</local-name>
+            <parent-name>[daily_demand_revenue.csv]</parent-name>
+            <remote-alias>daily_trip_count</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_metered_fares</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_metered_fares]</local-name>
+            <parent-name>[daily_demand_revenue.csv]</parent-name>
+            <remote-alias>total_metered_fares</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_passenger_amount_paid</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_passenger_amount_paid]</local-name>
+            <parent-name>[daily_demand_revenue.csv]</parent-name>
+            <remote-alias>total_passenger_amount_paid</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>total_passengers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_passengers]</local-name>
+            <parent-name>[daily_demand_revenue.csv]</parent-name>
+            <remote-alias>total_passengers</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>avg_passenger_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_passenger_amount]</local-name>
+            <parent-name>[daily_demand_revenue.csv]</parent-name>
+            <remote-alias>avg_passenger_amount</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Pickup Date" datatype="date" name="[pickup_date]" role="dimension" type="ordinal" />
+      <column caption="Daily Trip Count" datatype="integer" name="[daily_trip_count]" role="measure" type="quantitative" />
+      <column caption="Total Metered Fares" datatype="real" name="[total_metered_fares]" role="measure" type="quantitative" />
+      <column caption="Total Passenger Amount Paid" datatype="real" name="[total_passenger_amount_paid]" role="measure" type="quantitative" />
+      <column caption="Total Passengers" datatype="integer" name="[total_passengers]" role="measure" type="quantitative" />
+      <column caption="Average Reported Passengers per Trip" datatype="real" name="[avg_passenger_amount]" role="measure" type="quantitative" />
+      <extract enabled="true" count="-1" units="records" object-id="" user-specific="false">
+        <connection class="hyper" dbname="Data/Extracts/daily_demand_revenue.hyper" schema="Extract" tablename="Extract" access_mode="readonly">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>pickup_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[pickup_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_date</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>daily_trip_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[daily_trip_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>daily_trip_count</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_metered_fares</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_metered_fares]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_metered_fares</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_passenger_amount_paid</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_passenger_amount_paid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_passenger_amount_paid</remote-alias>
+              <ordinal>3</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>total_passengers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_passengers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_passengers</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>avg_passenger_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_passenger_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_passenger_amount</remote-alias>
+              <ordinal>5</ordinal>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <object-graph>
+        <objects>
+          <object caption="daily_demand_revenue.csv" id="daily_demand_revenue.csv_AA7CECB519CE5670868240FB93E2E933">
+            <properties context="">
+              <relation connection="textscan.4a7e0700cc02544899ab2cfbb3587e4f" name="daily_demand_revenue.csv" table="[daily_demand_revenue#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="date" name="pickup_date" ordinal="0" />
+                  <column datatype="integer" name="daily_trip_count" ordinal="1" />
+                  <column datatype="real" name="total_metered_fares" ordinal="2" />
+                  <column datatype="real" name="total_passenger_amount_paid" ordinal="3" />
+                  <column datatype="integer" name="total_passengers" ordinal="4" />
+                  <column datatype="real" name="avg_passenger_amount" ordinal="5" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption="Priority Table" inline="true" name="federated.priority_table" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="priority_table" name="textscan.8aaff74fd9025fc4b211fd0804731558">
+            <connection class="textscan" directory="Data" filename="priority_table.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.8aaff74fd9025fc4b211fd0804731558" name="priority_table.csv" table="[priority_table#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="string" name="Priority_zone" ordinal="0" />
+            <column datatype="string" name="Peak_hour" ordinal="1" />
+            <column datatype="string" name="Pickups_per_day_in_peak_hour" ordinal="2" />
+            <column datatype="string" name="Monthly_trip_share" ordinal="3" />
+            <column datatype="string" name="Label" ordinal="4" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Priority_zone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Priority_zone]</local-name>
+            <parent-name>[priority_table.csv]</parent-name>
+            <remote-alias>Priority_zone</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Peak_hour</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Peak_hour]</local-name>
+            <parent-name>[priority_table.csv]</parent-name>
+            <remote-alias>Peak_hour</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Pickups_per_day_in_peak_hour</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pickups_per_day_in_peak_hour]</local-name>
+            <parent-name>[priority_table.csv]</parent-name>
+            <remote-alias>Pickups_per_day_in_peak_hour</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Monthly_trip_share</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Monthly_trip_share]</local-name>
+            <parent-name>[priority_table.csv]</parent-name>
+            <remote-alias>Monthly_trip_share</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Label]</local-name>
+            <parent-name>[priority_table.csv]</parent-name>
+            <remote-alias>Label</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Priority Zone" datatype="string" name="[Priority_zone]" role="dimension" type="nominal" />
+      <column caption="Peak Hour" datatype="string" name="[Peak_hour]" role="dimension" type="nominal" />
+      <column caption="Pickups Per Day In Peak Hour" datatype="string" name="[Pickups_per_day_in_peak_hour]" role="dimension" type="nominal" />
+      <column caption="Monthly Trip Share" datatype="string" name="[Monthly_trip_share]" role="dimension" type="nominal" />
+      <column caption="Label" datatype="string" name="[Label]" role="dimension" type="nominal" />
+      <extract enabled="true" count="-1" units="records" object-id="" user-specific="false">
+        <connection class="hyper" dbname="Data/Extracts/priority_table.hyper" schema="Extract" tablename="Extract" access_mode="readonly">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>Priority_zone</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Priority_zone]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Priority_zone</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Peak_hour</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Peak_hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Peak_hour</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Pickups_per_day_in_peak_hour</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pickups_per_day_in_peak_hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pickups_per_day_in_peak_hour</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Monthly_trip_share</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Monthly_trip_share]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Monthly_trip_share</remote-alias>
+              <ordinal>3</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Label</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Label]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Label</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <object-graph>
+        <objects>
+          <object caption="priority_table.csv" id="priority_table.csv_C63132ABEB5D5AED9B80EC99DEEC1834">
+            <properties context="">
+              <relation connection="textscan.8aaff74fd9025fc4b211fd0804731558" name="priority_table.csv" table="[priority_table#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="string" name="Priority_zone" ordinal="0" />
+                  <column datatype="string" name="Peak_hour" ordinal="1" />
+                  <column datatype="string" name="Pickups_per_day_in_peak_hour" ordinal="2" />
+                  <column datatype="string" name="Monthly_trip_share" ordinal="3" />
+                  <column datatype="string" name="Label" ordinal="4" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption="Airport Table" inline="true" name="federated.airport_table" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="airport_table" name="textscan.04f77c53d7905fce9b007108614aaf2c">
+            <connection class="textscan" directory="Data" filename="airport_table.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.04f77c53d7905fce9b007108614aaf2c" name="airport_table.csv" table="[airport_table#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="string" name="Pickup_area" ordinal="0" />
+            <column datatype="string" name="January_trips" ordinal="1" />
+            <column datatype="string" name="Payment_per_trip_USD" ordinal="2" />
+            <column datatype="string" name="Minutes_per_trip" ordinal="3" />
+            <column datatype="string" name="Label" ordinal="4" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Pickup_area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pickup_area]</local-name>
+            <parent-name>[airport_table.csv]</parent-name>
+            <remote-alias>Pickup_area</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>January_trips</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[January_trips]</local-name>
+            <parent-name>[airport_table.csv]</parent-name>
+            <remote-alias>January_trips</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Payment_per_trip_USD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Payment_per_trip_USD]</local-name>
+            <parent-name>[airport_table.csv]</parent-name>
+            <remote-alias>Payment_per_trip_USD</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Minutes_per_trip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Minutes_per_trip]</local-name>
+            <parent-name>[airport_table.csv]</parent-name>
+            <remote-alias>Minutes_per_trip</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Label]</local-name>
+            <parent-name>[airport_table.csv]</parent-name>
+            <remote-alias>Label</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Pickup Area" datatype="string" name="[Pickup_area]" role="dimension" type="nominal" />
+      <column caption="January Trips" datatype="string" name="[January_trips]" role="dimension" type="nominal" />
+      <column caption="Payment Per Trip Usd" datatype="string" name="[Payment_per_trip_USD]" role="dimension" type="nominal" />
+      <column caption="Minutes Per Trip" datatype="string" name="[Minutes_per_trip]" role="dimension" type="nominal" />
+      <column caption="Label" datatype="string" name="[Label]" role="dimension" type="nominal" />
+      <extract enabled="true" count="-1" units="records" object-id="" user-specific="false">
+        <connection class="hyper" dbname="Data/Extracts/airport_table.hyper" schema="Extract" tablename="Extract" access_mode="readonly">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>Pickup_area</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pickup_area]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pickup_area</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>January_trips</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[January_trips]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>January_trips</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Payment_per_trip_USD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Payment_per_trip_USD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Payment_per_trip_USD</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Minutes_per_trip</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Minutes_per_trip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Minutes_per_trip</remote-alias>
+              <ordinal>3</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>Label</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Label]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Label</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[airport_table.csv_7C11F43F61575490A21485D3A05ABED3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <object-graph>
+        <objects>
+          <object caption="airport_table.csv" id="airport_table.csv_7C11F43F61575490A21485D3A05ABED3">
+            <properties context="">
+              <relation connection="textscan.04f77c53d7905fce9b007108614aaf2c" name="airport_table.csv" table="[airport_table#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="string" name="Pickup_area" ordinal="0" />
+                  <column datatype="string" name="January_trips" ordinal="1" />
+                  <column datatype="string" name="Payment_per_trip_USD" ordinal="2" />
+                  <column datatype="string" name="Minutes_per_trip" ordinal="3" />
+                  <column datatype="string" name="Label" ordinal="4" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Avg Daily Trips by Pickup Hour - January 2026">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="hourly_demand (2)" name="federated.1u5j93w0zyn4pj1ayazlx01lx9gc" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1u5j93w0zyn4pj1ayazlx01lx9gc">
+            <column caption="Avg Daily Trips" datatype="real" name="[avg_daily_trips]" role="measure" type="quantitative" />
+            <column-instance column="[pickup_hour]" derivation="None" name="[none:pickup_hour:ok]" pivot="key" type="ordinal" />
+            <column caption="Pickup Hour" datatype="integer" name="[pickup_hour]" role="dimension" type="ordinal" />
+            <column-instance column="[avg_daily_trips]" derivation="Sum" name="[sum:avg_daily_trips:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[federated.1u5j93w0zyn4pj1ayazlx01lx9gc].[sum:avg_daily_trips:qk]</rows>
+        <cols>[federated.1u5j93w0zyn4pj1ayazlx01lx9gc].[none:pickup_hour:ok]</cols>
+      </table>
+      <simple-id uuid="{E71D1670-00FA-4D1E-8C87-4D0A951FB9A1}" />
+    </worksheet>
+    <worksheet name="Daily Taxi Demand - January 2026">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Daily Demand Revenue" name="federated.1uwl16d11v8kzy1exlwbj10f25l4" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1uwl16d11v8kzy1exlwbj10f25l4">
+            <column caption="Daily Trip Count" datatype="integer" name="[daily_trip_count]" role="measure" type="quantitative" />
+            <column-instance column="[pickup_date]" derivation="None" name="[none:pickup_date:qk]" pivot="key" type="quantitative" />
+            <column caption="Pickup Date" datatype="date" name="[pickup_date]" role="dimension" type="ordinal" />
+            <column-instance column="[daily_trip_count]" derivation="Sum" name="[sum:daily_trip_count:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="axis">
+            <format attr="title" class="0" field="[federated.1uwl16d11v8kzy1exlwbj10f25l4].[sum:daily_trip_count:qk]" scope="rows" value="Number of Trips" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Line" />
+          </pane>
+        </panes>
+        <rows>[federated.1uwl16d11v8kzy1exlwbj10f25l4].[sum:daily_trip_count:qk]</rows>
+        <cols>[federated.1uwl16d11v8kzy1exlwbj10f25l4].[none:pickup_date:qk]</cols>
+      </table>
+      <simple-id uuid="{E7113465-1ED5-427B-87C9-DC47337ED5F3}" />
+    </worksheet>
+    <worksheet name="Hourly Pickup Demand by Selected Zone - January 2026">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="zone_hourly_performance" name="federated.1hi7sw51lq8z7k1djxccf17rgpei" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1hi7sw51lq8z7k1djxccf17rgpei">
+            <column caption="Avg Trips In This Hour" datatype="real" name="[avg_trips_per_active_day]" role="dimension" type="quantitative" />
+            <column-instance column="[avg_trips_per_active_day]" derivation="None" name="[none:avg_trips_per_active_day:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[pickup_hour_of_the_day]" derivation="None" name="[none:pickup_hour_of_the_day:ok]" pivot="key" type="ordinal" />
+            <column-instance column="[pickup_zone]" derivation="None" name="[none:pickup_zone:nk]" pivot="key" type="nominal" />
+            <column caption="Pickup Hour Of The Day" datatype="integer" name="[pickup_hour_of_the_day]" role="dimension" type="quantitative" />
+            <column caption="Pickup Zone" datatype="string" name="[pickup_zone]" role="dimension" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:pickup_hour_of_the_day:ok]">
+            <groupfilter function="union" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate">
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="0" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="1" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="2" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="3" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="4" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="5" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="6" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="7" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="8" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="9" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="10" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="11" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="12" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="13" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="14" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="15" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="16" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="17" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="18" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="19" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="20" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="21" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="22" />
+              <groupfilter function="member" level="[none:pickup_hour_of_the_day:ok]" member="23" />
+            </groupfilter>
+          </filter>
+          <filter class="categorical" column="[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:pickup_zone:nk]">
+            <groupfilter function="union" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate">
+              <groupfilter function="member" level="[none:pickup_zone:nk]" member="&quot;East Village&quot;" />
+              <groupfilter function="member" level="[none:pickup_zone:nk]" member="&quot;JFK Airport&quot;" />
+              <groupfilter function="member" level="[none:pickup_zone:nk]" member="&quot;LaGuardia Airport&quot;" />
+              <groupfilter function="member" level="[none:pickup_zone:nk]" member="&quot;Midtown Center&quot;" />
+              <groupfilter function="member" level="[none:pickup_zone:nk]" member="&quot;Upper East Side South&quot;" />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:pickup_hour_of_the_day:ok]</column>
+            <column>[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:pickup_zone:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Square" />
+            <encodings>
+              <color column="[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:avg_trips_per_active_day:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:pickup_zone:nk]</rows>
+        <cols>[federated.1hi7sw51lq8z7k1djxccf17rgpei].[none:pickup_hour_of_the_day:ok]</cols>
+      </table>
+      <simple-id uuid="{E23047C1-E7C0-478D-BCB8-93738D3287F5}" />
+    </worksheet>
+    <worksheet name="Top 15 Pickup Zones by Trip - January 2026">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="zone_performance" name="federated.1adpn470f2ittv1cz1ob007rj8pe" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1adpn470f2ittv1cz1ob007rj8pe">
+            <column-instance column="[pickup_zone]" derivation="None" name="[none:pickup_zone:nk]" pivot="key" type="nominal" />
+            <column caption="Pickup Zone" datatype="string" name="[pickup_zone]" role="dimension" type="nominal" />
+            <column-instance column="[total_trip_count]" derivation="Sum" name="[sum:total_trip_count:qk]" pivot="key" type="quantitative" />
+            <column caption="Total Trip Count" datatype="integer" name="[total_trip_count]" role="measure" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.1adpn470f2ittv1cz1ob007rj8pe].[none:pickup_zone:nk]">
+            <groupfilter count="15" end="top" function="end" units="records" user:ui-marker="end" user:ui-top-by-field="true">
+              <groupfilter direction="DESC" expression="SUM([total_trip_count])" function="order" user:ui-marker="order">
+                <groupfilter function="level-members" level="[none:pickup_zone:nk]" user:ui-enumeration="all" user:ui-marker="enumerate" />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column="[federated.1adpn470f2ittv1cz1ob007rj8pe].[none:pickup_zone:nk]" direction="ASC">
+            <dictionary>
+              <bucket>"Upper East Side South"</bucket>
+              <bucket>"Upper East Side North"</bucket>
+              <bucket>"JFK Airport"</bucket>
+              <bucket>"Midtown Center"</bucket>
+              <bucket>"Penn Station/Madison Sq West"</bucket>
+              <bucket>"Lincoln Square East"</bucket>
+              <bucket>"Midtown East"</bucket>
+              <bucket>"Times Sq/Theatre District"</bucket>
+              <bucket>"East Village"</bucket>
+              <bucket>"Upper West Side South"</bucket>
+              <bucket>"Union Sq"</bucket>
+              <bucket>"Murray Hill"</bucket>
+              <bucket>"East Chelsea"</bucket>
+              <bucket>"Lenox Hill West"</bucket>
+              <bucket>"Midtown North"</bucket>
+              <bucket>"LaGuardia Airport"</bucket>
+              <bucket>"Clinton East"</bucket>
+              <bucket>"West Village"</bucket>
+              <bucket>"Lenox Hill East"</bucket>
+              <bucket>"Yorkville West"</bucket>
+              <bucket>"Upper West Side North"</bucket>
+              <bucket>"Gramercy"</bucket>
+              <bucket>"Midtown South"</bucket>
+              <bucket>"West Chelsea/Hudson Yards"</bucket>
+              <bucket>"Sutton Place/Turtle Bay North"</bucket>
+              <bucket>"Flatiron"</bucket>
+              <bucket>"Yorkville East"</bucket>
+              <bucket>"Greenwich Village South"</bucket>
+              <bucket>"Greenwich Village North"</bucket>
+              <bucket>"TriBeCa/Civic Center"</bucket>
+              <bucket>"Kips Bay"</bucket>
+              <bucket>"Lower East Side"</bucket>
+              <bucket>"Garment District"</bucket>
+              <bucket>"Lincoln Square West"</bucket>
+              <bucket>"Central Park"</bucket>
+              <bucket>"Little Italy/NoLiTa"</bucket>
+              <bucket>"UN/Turtle Bay South"</bucket>
+              <bucket>"Meatpacking/West Village West"</bucket>
+              <bucket>"Manhattan Valley"</bucket>
+              <bucket>"East Harlem South"</bucket>
+              <bucket>"SoHo"</bucket>
+              <bucket>"Clinton West"</bucket>
+              <bucket>"Financial District North"</bucket>
+              <bucket>"Battery Park City"</bucket>
+              <bucket>"Morningside Heights"</bucket>
+              <bucket>"Central Harlem"</bucket>
+              <bucket>"Hudson Sq"</bucket>
+              <bucket>"Alphabet City"</bucket>
+              <bucket>"East Harlem North"</bucket>
+              <bucket>"World Trade Center"</bucket>
+              <bucket>"Central Harlem North"</bucket>
+              <bucket>"Financial District South"</bucket>
+              <bucket>"Two Bridges/Seward Park"</bucket>
+              <bucket>"Bloomingdale"</bucket>
+              <bucket>"Astoria"</bucket>
+              <bucket>"Washington Heights South"</bucket>
+              <bucket>"Stuy Town/Peter Cooper Village"</bucket>
+              <bucket>"Williamsburg (North Side)"</bucket>
+              <bucket>"Hamilton Heights"</bucket>
+              <bucket>"Chinatown"</bucket>
+              <bucket>"Sunnyside"</bucket>
+              <bucket>"Seaport"</bucket>
+              <bucket>"East Elmhurst"</bucket>
+              <bucket>"Long Island City/Hunters Point"</bucket>
+              <bucket>"Crown Heights North"</bucket>
+              <bucket>"Williamsburg (South Side)"</bucket>
+              <bucket>"Bushwick South"</bucket>
+              <bucket>"Greenpoint"</bucket>
+              <bucket>"East Williamsburg"</bucket>
+              <bucket>"East New York"</bucket>
+              <bucket>"Fort Greene"</bucket>
+              <bucket>"Brooklyn Heights"</bucket>
+              <bucket>"Manhattanville"</bucket>
+              <bucket>"Jackson Heights"</bucket>
+              <bucket>"Stuyvesant Heights"</bucket>
+              <bucket>"Park Slope"</bucket>
+              <bucket>"Bushwick North"</bucket>
+              <bucket>"Washington Heights North"</bucket>
+              <bucket>"DUMBO/Vinegar Hill"</bucket>
+              <bucket>"Downtown Brooklyn/MetroTech"</bucket>
+              <bucket>"N/A"</bucket>
+              <bucket>"Boerum Hill"</bucket>
+              <bucket>"Prospect-Lefferts Gardens"</bucket>
+              <bucket>"Flatbush/Ditmas Park"</bucket>
+              <bucket>"Jamaica"</bucket>
+              <bucket>"Bedford"</bucket>
+              <bucket>"Long Island City/Queens Plaza"</bucket>
+              <bucket>"Clinton Hill"</bucket>
+              <bucket>"Old Astoria"</bucket>
+              <bucket>"South Ozone Park"</bucket>
+              <bucket>"Canarsie"</bucket>
+              <bucket>"Steinway"</bucket>
+              <bucket>"Woodside"</bucket>
+              <bucket>"Brownsville"</bucket>
+              <bucket>"Elmhurst"</bucket>
+              <bucket>"Ocean Hill"</bucket>
+              <bucket>"Mott Haven/Port Morris"</bucket>
+              <bucket>"East Flatbush/Remsen Village"</bucket>
+              <bucket>"Richmond Hill"</bucket>
+              <bucket>"Forest Hills"</bucket>
+              <bucket>"Flatlands"</bucket>
+              <bucket>"East Flatbush/Farragut"</bucket>
+              <bucket>"Crown Heights South"</bucket>
+              <bucket>"Queensbridge/Ravenswood"</bucket>
+              <bucket>"Ridgewood"</bucket>
+              <bucket>"Inwood"</bucket>
+              <bucket>"Baisley Park"</bucket>
+              <bucket>"Sunset Park West"</bucket>
+              <bucket>"Bay Ridge"</bucket>
+              <bucket>"Prospect Heights"</bucket>
+              <bucket>"East Concourse/Concourse Village"</bucket>
+              <bucket>"Erasmus"</bucket>
+              <bucket>"Melrose South"</bucket>
+              <bucket>"Coney Island"</bucket>
+              <bucket>"Carroll Gardens"</bucket>
+              <bucket>"Soundview/Castle Hill"</bucket>
+              <bucket>"South Jamaica"</bucket>
+              <bucket>"West Concourse"</bucket>
+              <bucket>"Cypress Hills"</bucket>
+              <bucket>"Co-Op City"</bucket>
+              <bucket>"Saint Albans"</bucket>
+              <bucket>"Cobble Hill"</bucket>
+              <bucket>"Williamsbridge/Olinville"</bucket>
+              <bucket>"East New York/Pennsylvania Avenue"</bucket>
+              <bucket>"Parkchester"</bucket>
+              <bucket>"University Heights/Morris Heights"</bucket>
+              <bucket>"Red Hook"</bucket>
+              <bucket>"Briarwood/Jamaica Hills"</bucket>
+              <bucket>"Borough Park"</bucket>
+              <bucket>"Morrisania/Melrose"</bucket>
+              <bucket>"Flushing"</bucket>
+              <bucket>"Corona"</bucket>
+              <bucket>"Woodhaven"</bucket>
+              <bucket>"Hammels/Arverne"</bucket>
+              <bucket>"Gowanus"</bucket>
+              <bucket>"Maspeth"</bucket>
+              <bucket>"Midwood"</bucket>
+              <bucket>"Queens Village"</bucket>
+              <bucket>"East Tremont"</bucket>
+              <bucket>"Far Rockaway"</bucket>
+              <bucket>"Springfield Gardens North"</bucket>
+              <bucket>"Elmhurst/Maspeth"</bucket>
+              <bucket>"Starrett City"</bucket>
+              <bucket>"Marine Park/Mill Basin"</bucket>
+              <bucket>"Sheepshead Bay"</bucket>
+              <bucket>"Rego Park"</bucket>
+              <bucket>"Mount Hope"</bucket>
+              <bucket>"Kensington"</bucket>
+              <bucket>"Bedford Park"</bucket>
+              <bucket>"Highbridge"</bucket>
+              <bucket>"Springfield Gardens South"</bucket>
+              <bucket>"Van Cortlandt Village"</bucket>
+              <bucket>"Kew Gardens"</bucket>
+              <bucket>"Spuyten Duyvil/Kingsbridge"</bucket>
+              <bucket>"Norwood"</bucket>
+              <bucket>"Westchester Village/Unionport"</bucket>
+              <bucket>"Soundview/Bruckner"</bucket>
+              <bucket>"Claremont/Bathgate"</bucket>
+              <bucket>"Bensonhurst West"</bucket>
+              <bucket>"West Farms/Bronx River"</bucket>
+              <bucket>"Sunset Park East"</bucket>
+              <bucket>"Homecrest"</bucket>
+              <bucket>"Van Nest/Morris Park"</bucket>
+              <bucket>"Hillcrest/Pomonok"</bucket>
+              <bucket>"Woodlawn/Wakefield"</bucket>
+              <bucket>"South Williamsburg"</bucket>
+              <bucket>"Hunts Point"</bucket>
+              <bucket>"Jamaica Estates"</bucket>
+              <bucket>"Eastchester"</bucket>
+              <bucket>"Crotona Park East"</bucket>
+              <bucket>"Outside of NYC"</bucket>
+              <bucket>"Pelham Parkway"</bucket>
+              <bucket>"Bronxdale"</bucket>
+              <bucket>"Kingsbridge Heights"</bucket>
+              <bucket>"Middle Village"</bucket>
+              <bucket>"Schuylerville/Edgewater Park"</bucket>
+              <bucket>"Glendale"</bucket>
+              <bucket>"Windsor Terrace"</bucket>
+              <bucket>"North Corona"</bucket>
+              <bucket>"Roosevelt Island"</bucket>
+              <bucket>"Battery Park"</bucket>
+              <bucket>"Bensonhurst East"</bucket>
+              <bucket>"Brighton Beach"</bucket>
+              <bucket>"Kew Gardens Hills"</bucket>
+              <bucket>"Howard Beach"</bucket>
+              <bucket>"Brooklyn Navy Yard"</bucket>
+              <bucket>"Madison"</bucket>
+              <bucket>"Longwood"</bucket>
+              <bucket>"Laurelton"</bucket>
+              <bucket>"Ozone Park"</bucket>
+              <bucket>"Gravesend"</bucket>
+              <bucket>"Rosedale"</bucket>
+              <bucket>"Hollis"</bucket>
+              <bucket>"Belmont"</bucket>
+              <bucket>"Riverdale/North Riverdale/Fieldston"</bucket>
+              <bucket>"Allerton/Pelham Gardens"</bucket>
+              <bucket>"Dyker Heights"</bucket>
+              <bucket>"Fordham South"</bucket>
+              <bucket>"Flushing Meadows-Corona Park"</bucket>
+              <bucket>"Columbia Street"</bucket>
+              <bucket>"Bellerose"</bucket>
+              <bucket>"Cambria Heights"</bucket>
+              <bucket>"Murray Hill-Queens"</bucket>
+              <bucket>"College Point"</bucket>
+              <bucket>"Bayside"</bucket>
+              <bucket>"Whitestone"</bucket>
+              <bucket>"Bath Beach"</bucket>
+              <bucket>"Ocean Parkway South"</bucket>
+              <bucket>"Manhattan Beach"</bucket>
+              <bucket>"Queensboro Hill"</bucket>
+              <bucket>"Prospect Park"</bucket>
+              <bucket>"Glen Oaks"</bucket>
+              <bucket>"Rockaway Park"</bucket>
+              <bucket>"Pelham Bay"</bucket>
+              <bucket>"Fresh Meadows"</bucket>
+              <bucket>"Marble Hill"</bucket>
+              <bucket>"Oakland Gardens"</bucket>
+              <bucket>"Inwood Hill Park"</bucket>
+              <bucket>"Auburndale"</bucket>
+              <bucket>"East Flushing"</bucket>
+              <bucket>"Bay Terrace/Fort Totten"</bucket>
+              <bucket>"Van Cortlandt Park"</bucket>
+              <bucket>"Douglaston"</bucket>
+              <bucket>"Saint Michaels Cemetery/Woodside"</bucket>
+              <bucket>"Randalls Island"</bucket>
+              <bucket>"Newark Airport"</bucket>
+              <bucket>"Forest Park/Highland Park"</bucket>
+              <bucket>"Arrochar/Fort Wadsworth"</bucket>
+              <bucket>"Bronx Park"</bucket>
+              <bucket>"Highbridge Park"</bucket>
+              <bucket>"Stapleton"</bucket>
+              <bucket>"Country Club"</bucket>
+              <bucket>"South Beach/Dongan Hills"</bucket>
+              <bucket>"Marine Park/Floyd Bennett Field"</bucket>
+              <bucket>"City Island"</bucket>
+              <bucket>"Grymes Hill/Clifton"</bucket>
+              <bucket>"Astoria Park"</bucket>
+              <bucket>"Crotona Park"</bucket>
+              <bucket>"Bloomfield/Emerson Hill"</bucket>
+              <bucket>"New Dorp/Midland Beach"</bucket>
+              <bucket>"Broad Channel"</bucket>
+              <bucket>"Heartland Village/Todt Hill"</bucket>
+              <bucket>"Westerleigh"</bucket>
+              <bucket>"Pelham Bay Park"</bucket>
+              <bucket>"Willets Point"</bucket>
+              <bucket>"Oakwood"</bucket>
+              <bucket>"Saint George/New Brighton"</bucket>
+              <bucket>"Great Kills"</bucket>
+              <bucket>"West Brighton"</bucket>
+              <bucket>"Mariners Harbor"</bucket>
+              <bucket>"Port Richmond"</bucket>
+              <bucket>"Green-Wood Cemetery"</bucket>
+              <bucket>"Breezy Point/Fort Tilden/Riis Beach"</bucket>
+              <bucket>"Rikers Island"</bucket>
+              <bucket>"Jamaica Bay"</bucket>
+              <bucket>"Arden Heights"</bucket>
+              <bucket>"Governor's Island/Ellis Island/Liberty Island"</bucket>
+              <bucket>"Eltingville/Annadale/Prince's Bay"</bucket>
+              <bucket>"Rossville/Woodrow"</bucket>
+              <bucket>"Freshkills Park"</bucket>
+              <bucket>"Charleston/Tottenville"</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1adpn470f2ittv1cz1ob007rj8pe].[none:pickup_zone:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+          </pane>
+        </panes>
+        <rows>[federated.1adpn470f2ittv1cz1ob007rj8pe].[none:pickup_zone:nk]</rows>
+        <cols>[federated.1adpn470f2ittv1cz1ob007rj8pe].[sum:total_trip_count:qk]</cols>
+      </table>
+      <simple-id uuid="{B5F0692A-07BB-4D56-B599-27EAF103F6E8}" />
+    </worksheet>
+    <worksheet name="Priority pickup windows">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="federated.priority_table" />
+          </datasources>
+          <datasource-dependencies datasource="federated.priority_table">
+            <column caption="Priority zone" datatype="string" name="[Priority_zone]" role="dimension" type="nominal" />
+            <column-instance column="[Priority_zone]" derivation="None" name="[none:Priority_zone:nk]" pivot="key" type="nominal" />
+            <column caption="Peak hour" datatype="string" name="[Peak_hour]" role="dimension" type="nominal" />
+            <column-instance column="[Peak_hour]" derivation="None" name="[none:Peak_hour:nk]" pivot="key" type="nominal" />
+            <column caption="Pickups per day in peak hour" datatype="string" name="[Pickups_per_day_in_peak_hour]" role="dimension" type="nominal" />
+            <column-instance column="[Pickups_per_day_in_peak_hour]" derivation="None" name="[none:Pickups_per_day_in_peak_hour:nk]" pivot="key" type="nominal" />
+            <column caption="Monthly trip share" datatype="string" name="[Monthly_trip_share]" role="dimension" type="nominal" />
+            <column-instance column="[Monthly_trip_share]" derivation="None" name="[none:Monthly_trip_share:nk]" pivot="key" type="nominal" />
+            <column caption="Label" datatype="string" name="[Label]" role="dimension" type="nominal" />
+            <column-instance column="[Label]" derivation="None" name="[none:Label:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.priority_table].[none:Label:nk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.priority_table].[none:Priority_zone:nk] * [federated.priority_table].[none:Peak_hour:nk] * [federated.priority_table].[none:Pickups_per_day_in_peak_hour:nk] * [federated.priority_table].[none:Monthly_trip_share:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid="{7B5770DD-B6BB-4F88-BE76-BB36423ABA06}" />
+    </worksheet>
+    <worksheet name="Airport trip comparison">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="federated.airport_table" />
+          </datasources>
+          <datasource-dependencies datasource="federated.airport_table">
+            <column caption="Pickup area" datatype="string" name="[Pickup_area]" role="dimension" type="nominal" />
+            <column-instance column="[Pickup_area]" derivation="None" name="[none:Pickup_area:nk]" pivot="key" type="nominal" />
+            <column caption="January trips" datatype="string" name="[January_trips]" role="dimension" type="nominal" />
+            <column-instance column="[January_trips]" derivation="None" name="[none:January_trips:nk]" pivot="key" type="nominal" />
+            <column caption="Payment per trip USD" datatype="string" name="[Payment_per_trip_USD]" role="dimension" type="nominal" />
+            <column-instance column="[Payment_per_trip_USD]" derivation="None" name="[none:Payment_per_trip_USD:nk]" pivot="key" type="nominal" />
+            <column caption="Minutes per trip" datatype="string" name="[Minutes_per_trip]" role="dimension" type="nominal" />
+            <column-instance column="[Minutes_per_trip]" derivation="None" name="[none:Minutes_per_trip:nk]" pivot="key" type="nominal" />
+            <column caption="Label" datatype="string" name="[Label]" role="dimension" type="nominal" />
+            <column-instance column="[Label]" derivation="None" name="[none:Label:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.airport_table].[none:Label:nk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.airport_table].[none:Pickup_area:nk] * [federated.airport_table].[none:January_trips:nk] * [federated.airport_table].[none:Payment_per_trip_USD:nk] * [federated.airport_table].[none:Minutes_per_trip:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid="{29A734E6-C95E-4BDC-99C2-550D69437E3F}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="01 Demand overview" lock-updates="true">
+      <style />
+      <size maxheight="1000" minheight="1000" maxwidth="1500" minwidth="1500" sizing-mode="fixed" />
+      <zones>
+        <zone id="0" x="0" y="0" w="100000" h="100000" type-v2="layout-basic">
+          <zone id="1" x="1800" y="1000" w="96000" h="6500" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="25" bold="true" fontcolor="#18384b">NYC yellow taxi demand: January 2026</run>
+            </formatted-text>
+          </zone>
+          <zone id="2" x="1800" y="9000" w="96000" h="6500" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="18" bold="true" fontcolor="#18384b">3,517,775 eligible trips     $104.39M recorded payments     45.8% in the top 15 zones</run>
+            </formatted-text>
+          </zone>
+          <zone id="3" x="1800" y="93000" w="96000" h="5000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="11" bold="false" fontcolor="#18384b">Heatmap: darker means more pickups. Its averages include active days only. Recorded pickups do not measure unmet demand.</run>
+            </formatted-text>
+          </zone>
+          <zone id="4" name="Daily Taxi Demand - January 2026" x="1500" y="19000" w="48000" h="32000">
+            <layout-cache type-h="scalable" type-w="scalable" />
+          </zone>
+          <zone id="5" name="Avg Daily Trips by Pickup Hour - January 2026" x="50500" y="19000" w="48000" h="32000">
+            <layout-cache type-h="scalable" type-w="scalable" />
+          </zone>
+          <zone id="6" name="Top 15 Pickup Zones by Trip - January 2026" x="1500" y="53000" w="41000" h="38000">
+            <layout-cache type-h="scalable" type-w="scalable" />
+          </zone>
+          <zone id="7" name="Hourly Pickup Demand by Selected Zone - January 2026" x="43500" y="53000" w="55000" h="38000">
+            <layout-cache type-h="scalable" type-w="scalable" />
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid="{565F8E44-9CFF-4BD1-A867-357B7F3E0C57}" />
+    </dashboard>
+    <dashboard name="02 Coverage and airport decisions" lock-updates="true">
+      <style />
+      <size maxheight="1000" minheight="1000" maxwidth="1500" minwidth="1500" sizing-mode="fixed" />
+      <zones>
+        <zone id="0" x="0" y="0" w="100000" h="100000" type-v2="layout-basic">
+          <zone id="1" x="1800" y="1000" w="96000" h="6500" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="25" bold="true" fontcolor="#18384b">Where should the fleet test different coverage?</run>
+            </formatted-text>
+          </zone>
+          <zone id="2" x="1800" y="10500" w="96000" h="5000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="14" bold="false" fontcolor="#18384b">Top five zones by monthly trips. Peak-hour averages below include all 31 calendar days.</run>
+            </formatted-text>
+          </zone>
+          <zone id="3" x="1800" y="43000" w="96000" h="6000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="14" bold="false" fontcolor="#18384b">Test shift overlaps near these peak windows. Check nearby supply and repositioning costs before moving drivers.</run>
+            </formatted-text>
+          </zone>
+          <zone id="4" x="1800" y="49000" w="96000" h="4500" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="18" bold="true" fontcolor="#18384b">Airport payments and trip time</run>
+            </formatted-text>
+          </zone>
+          <zone id="5" x="1800" y="74000" w="96000" h="6500" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="14" bold="false" fontcolor="#18384b">Higher airport payments come with longer trips. These figures omit waiting, empty return travel and operating costs.</run>
+            </formatted-text>
+          </zone>
+          <zone id="6" x="1800" y="84000" w="96000" h="10000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="16" bold="true" fontcolor="#18384b">Decision: approve a limited pilot using existing vehicles, subject to dispatch and driver availability. Validate January patterns against recent months first.</run>
+            </formatted-text>
+          </zone>
+          <zone id="7" name="Priority pickup windows" x="1800" y="18000" w="96000" h="24000">
+            <layout-cache type-h="scalable" type-w="scalable" />
+          </zone>
+          <zone id="8" name="Airport trip comparison" x="1800" y="54000" w="96000" h="18000">
+            <layout-cache type-h="scalable" type-w="scalable" />
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid="{33E3F072-B4DF-42C3-BB69-8A09D3B87B2C}" />
+    </dashboard>
+    <dashboard name="03 Pilot and measurement" lock-updates="true">
+      <style />
+      <size maxheight="1000" minheight="1000" maxwidth="1500" minwidth="1500" sizing-mode="fixed" />
+      <zones>
+        <zone id="0" x="0" y="0" w="100000" h="100000" type-v2="layout-basic">
+          <zone id="1" x="1800" y="1000" w="96000" h="6500" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="25" bold="true" fontcolor="#18384b">A four-week pilot with a measurable business outcome</run>
+            </formatted-text>
+          </zone>
+          <zone id="2" x="2000" y="13000" w="95000" h="9000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="22" bold="true" fontcolor="#18384b">Goal: improve net earnings per driver working hour without worsening service coverage.</run>
+            </formatted-text>
+          </zone>
+          <zone id="3" x="2000" y="26000" w="95000" h="18000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="17" bold="false" fontcolor="#18384b">Pilot design
+Operations selects comparable zone and shift groups. One group tests revised shift overlaps; the comparison group keeps its current schedule. Check weekday mix, weather and events.</run>
+            </formatted-text>
+          </zone>
+          <zone id="4" x="2000" y="47000" w="95000" h="18000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="17" bold="false" fontcolor="#18384b">Measurement
+Primary: net earnings divided by all working hours. Supporting: trips per working hour and empty miles. Safeguard: passenger waiting time and coverage in comparison zones.</run>
+            </formatted-text>
+          </zone>
+          <zone id="5" x="2000" y="68000" w="95000" h="16000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="17" bold="false" fontcolor="#18384b">Decision gate
+Agree an economically meaningful improvement threshold and minimum sample before launch. Expand only when the pilot clears that threshold and service safeguards hold.</run>
+            </formatted-text>
+          </zone>
+          <zone id="6" x="2000" y="89000" w="95000" h="8000" type-v2="text" forceUpdate="true">
+            <formatted-text>
+              <run fontsize="12" bold="false" fontcolor="#18384b">Data needed: driver shifts, dispatch activity, waiting time, fuel and other costs. TLC trip records alone cannot demonstrate profit uplift. Source: NYC TLC, January 2026.</run>
+            </formatted-text>
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid="{CE680631-EA05-42FE-BB8A-1F4F06C1EF64}" />
+    </dashboard>
+  </dashboards>
+  <windows source-height="30">
+    <window class="worksheet" name="Avg Daily Trips by Pickup Hour - January 2026">
+      <cards>
+        <edge name="top">
+          <strip size="31">
+            <card type="columns" />
+          </strip>
+          <strip size="31">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{AD191006-1E85-41A4-8B58-052B4809615E}" />
+    </window>
+    <window class="worksheet" name="Daily Taxi Demand - January 2026">
+      <cards>
+        <edge name="top">
+          <strip size="31">
+            <card type="columns" />
+          </strip>
+          <strip size="31">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{55DBE2F7-A2C9-4E61-9FF4-AEAFDFE7CDD7}" />
+    </window>
+    <window class="worksheet" name="Hourly Pickup Demand by Selected Zone - January 2026">
+      <cards>
+        <edge name="top">
+          <strip size="31">
+            <card type="columns" />
+          </strip>
+          <strip size="31">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{366F905E-AF31-4785-9F92-E2905B392757}" />
+    </window>
+    <window class="worksheet" name="Top 15 Pickup Zones by Trip - January 2026">
+      <cards>
+        <edge name="top">
+          <strip size="31">
+            <card type="columns" />
+          </strip>
+          <strip size="31">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{55C12833-B0BD-40F1-B063-15A39CA216C8}" />
+    </window>
+    <window class="worksheet" name="Priority pickup windows">
+      <cards>
+        <edge name="top">
+          <strip size="31">
+            <card type="columns" />
+          </strip>
+          <strip size="31">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{E86BFF22-55B1-4134-AC99-0335E2EE4F5F}" />
+    </window>
+    <window class="worksheet" name="Airport trip comparison">
+      <cards>
+        <edge name="top">
+          <strip size="31">
+            <card type="columns" />
+          </strip>
+          <strip size="31">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{A24A0945-45E8-46F7-B0F8-140CE8D2C730}" />
+    </window>
+    <window class="dashboard" name="01 Demand overview" maximized="true">
+      <viewpoints>
+        <viewpoint name="Daily Taxi Demand - January 2026">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Avg Daily Trips by Pickup Hour - January 2026">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Top 15 Pickup Zones by Trip - January 2026">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Hourly Pickup Demand by Selected Zone - January 2026">
+          <zoom type="entire-view" />
+        </viewpoint>
+      </viewpoints>
+      <active id="-1" />
+      <device-preview />
+      <simple-id uuid="{E5E85297-2411-4448-9DC2-50FBBF7A6641}" />
+    </window>
+    <window class="dashboard" name="02 Coverage and airport decisions">
+      <viewpoints>
+        <viewpoint name="Priority pickup windows">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Airport trip comparison">
+          <zoom type="entire-view" />
+        </viewpoint>
+      </viewpoints>
+      <active id="-1" />
+      <device-preview />
+      <simple-id uuid="{2A2B38AE-6F06-47C5-9546-EA077A5ECE85}" />
+    </window>
+    <window class="dashboard" name="03 Pilot and measurement">
+      <viewpoints />
+      <active id="-1" />
+      <device-preview />
+      <simple-id uuid="{CBD0E861-73EB-47C9-A6D2-6D76C62ECBDC}" />
+    </window>
+  </windows>
+</workbook>
