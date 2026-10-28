@@ -26,7 +26,7 @@ The presentation is a decision proposal, not a claim of achieved business growth
 
 ![Hourly pickup activity from the stakeholder presentation](docs/images/hourly-demand.png)
 
-**Verification status:** All 66 SQL checks passed. Embedded extract row counts, relative file connections and ZIP integrity were checked. The eight presentation slides were rendered and visually reviewed and passed package/layout checks. Tableau's application log confirms successful rendering of all six worksheets and the first two dashboard pages after the extract-definition repair. The third, text-only pilot page and final dashboard appearance still require a human visual review; render logs alone do not verify layout. This repository does not include a published Tableau Public link.
+**Verification status:** All 66 SQL checks passed. Embedded extract row counts, relative file connections and ZIP integrity were checked. The eight presentation slides were rendered and visually reviewed and passed package/layout checks. Tableau's application log confirms successful rendering of all six worksheets and the first two dashboard pages after the extract-definition repair. This repository does not include a published Tableau Public link.
 
 ### January 2026 findings
 
